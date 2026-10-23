@@ -1,0 +1,6 @@
+(executables
+ (public_names hw07 - -)
+ (names evaluate parse to_string)
+ (libraries src)
+ (preprocess
+  (pps ppx_expect ppx_sexp_conv)))
