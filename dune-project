@@ -6,6 +6,8 @@
 
 (generate_opam_files false)
 
+(executables_implicit_empty_intf false)
+
 (source
  (github username/reponame))
 
