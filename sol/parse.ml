@@ -53,12 +53,12 @@ let parse chars =
 check_expect_datum (parse [ '7' ], Integer 7, "single digit datum");;
 
 check_expect_datum
-  ( parse (char_list "( + 3 4)"),
-    List [ Symbol "+"; Integer 3; Integer 4 ],
+  ( parse (char_list "( + 6 5)"),
+    List [ Symbol "+"; Integer 6; Integer 5 ],
     "addition operator" )
 ;;
 
 check_expect_datum
-  ( parse (char_list "(* (+ 4 6) 5)"),
-    List [ Symbol "*"; List [ Symbol "+"; Integer 4; Integer 6 ]; Integer 5 ],
+  ( parse (char_list "(* (+ 3 6) 2)"),
+    List [ Symbol "*"; List [ Symbol "+"; Integer 3; Integer 6 ]; Integer 2 ],
     "nested expression" )
